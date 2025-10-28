@@ -101,6 +101,14 @@ my-school/
 
 ---
 
+## 📷 Screenshots
+
+| Home  | Form | List |
+|-------------|------------------|--------|
+| ![Upload](screenshots/pchome.png) | ![Processing](screenshots/pcform.png) | ![Result](screenshots/pcshow.png) |
+| ![Upload](screenshots/mbhome.png) | ![Processing](screenshots/mbform.png) | ![Result](screenshots/mbshow.png) |
+---
+
 ## 💡 How to Run Locally
 
 1. **Clone the repository**
