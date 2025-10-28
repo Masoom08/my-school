@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏫 My School — Next.js + MySQL Project
 
-## Getting Started
+A responsive mini-project built using **Next.js** and **MySQL**, designed to manage school records efficiently.  
+The application allows users to **add new schools** through a validated form and **view all schools** in a modern, card-based layout.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📋 Project Overview
+
+This project was developed as part of a JavaScript framework assignment, using **Next.js** (with TypeScript) and **MySQL** as the database.
+
+### 🎯 Objective
+- Create a simple web app with **two functional pages**:
+  1. A page to **add** and store school data in a MySQL table.
+  2. A page to **fetch** and display all stored schools in a clean, responsive format.
+
+> For better navigation and experience, the project includes **three pages**:  
+> `Home`, `Add School`, and `Show Schools`.
+
+---
+
+## 🧱 Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **Next.js (TypeScript)** | Frontend framework |
+| **React Hook Form** | Form handling and validation |
+| **MySQL** | Database for storing school data |
+| **Vercel** | Hosting platform |
+| **CSS / Responsive Design** | Mobile and desktop friendly layout |
+
+---
+
+## 🗂️ Project Structure
+
+my-school/
+│
+├── app/
+│ ├── add-school/ # Add School form page
+│ ├── show-schools/ # Display schools (grid layout)
+│ ├── page.tsx # Home page
+│ └── api/
+│ └── schools/
+│ └── route.ts # GET & POST API endpoints (commented out for local setup)
+│
+├── public/
+│ └── schoolImages/ # Folder to store uploaded school images
+│
+├── lib/
+│ └── db.ts # MySQL database connection (or local DB setup)
+│
+├── models/
+│ └── school.ts # Sequelize model for 'schools' table
+│
+└── README.md
+
+
+
+---
+
+## 🧩 Features
+
+- ✅ **Add School** – A responsive form built with `react-hook-form` for input and validation.
+  - Validations include email format, required fields, and proper number input.
+  - Images are stored in the `/public/schoolImages` folder.
+  
+- ✅ **Show Schools** – Displays all schools in a **card-style layout**, similar to product listings on e-commerce sites.
+  - Shows **name**, **address**, **city**, and **image**.
+  - Responsive for both mobile and desktop devices.
+
+- ✅ **API Endpoints** (commented in code for reference)
+  - `POST /api/schools` → Add new school to database
+  - `GET /api/schools` → Fetch all schools
+
+---
+
+## ⚙️ MySQL Table Schema
+
+**Table Name:** `schools`
+
+| Column | Type | Description |
+|---------|------|-------------|
+| id | INT (AUTO_INCREMENT) | Primary Key |
+| name | TEXT | School name |
+| address | TEXT | School address |
+| city | TEXT | City name |
+| state | TEXT | State name |
+| contact | VARCHAR(15) | Contact number |
+| image | TEXT | Image path |
+| email_id | TEXT | Email address |
+
+---
+
+## 🚀 Deployment
+
+- Hosted on **Vercel**  
+  🔗 [https://my-school-lake.vercel.app/](https://my-school-lake.vercel.app)
+
+> The deployed version uses a **local database setup** for demonstration.  
+> Original MySQL-based GET and POST API routes remain in code (commented for hosting compatibility).
+
+---
+
+## 💡 How to Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/my-school.git
+   cd my-school
+   
+2. **Install dependencies**
+  ```bash
+    npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Set up environment variables**
+Create a .env.local file:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  ```bash
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=yourpassword
+DB_NAME=school_db
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+4. **Run the development server**
+   
+```bash
+npm run dev
+```
+The app will be available at:
+http://localhost:3000
 
-## Learn More
+##📱 Responsiveness
+Fully responsive layout compatible with:
 
-To learn more about Next.js, take a look at the following resources:
+   1. Desktop screens
+   2. Mobile devices
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👩‍💻 Author
+**Masoom Singh**
+📧 masoomsingh0801@gmail.com
+💼 Built with a focus on clean design, modular structure, and practical usability.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+##🏁 Conclusion
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project demonstrates:
+1. Integration of Next.js with a relational database (MySQL).
+2. Clean form validation and API handling.
+3. Responsive UI and real-world structure suitable for small-scale web apps.
