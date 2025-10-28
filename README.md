@@ -33,28 +33,28 @@ This project was developed as part of a JavaScript framework assignment, using *
 
 ## 🗂️ Project Structure
 
+```bash
 my-school/
 │
 ├── app/
-│ ├── add-school/ # Add School form page
-│ ├── show-schools/ # Display schools (grid layout)
-│ ├── page.tsx # Home page
-│ └── api/
-│ └── schools/
-│ └── route.ts # GET & POST API endpoints (commented out for local setup)
+│   ├── add-school/           # Add School form page
+│   ├── show-schools/         # Display schools (grid layout)
+│   ├── page.tsx              # Home page
+│   └── api/
+│       └── schools/
+│           └── route.ts      # GET & POST API endpoints (commented out for local setup)
 │
-├── public/
-│ └── schoolImages/ # Folder to store uploaded school images
+├── components                # This has all the UI related Components used in the frontend
+│   └── ui/
 │
 ├── lib/
-│ └── db.ts # MySQL database connection (or local DB setup)
-│
+│   └── db.ts                 # MySQL database connection (or local DB setup)
+│   └── utils.ts              # Tailwind CSS utility helper
 ├── models/
-│ └── school.ts # Sequelize model for 'schools' table
+│   └── school.ts             # Sequelize model for 'schools' table
 │
 └── README.md
-
-
+```
 
 ---
 
